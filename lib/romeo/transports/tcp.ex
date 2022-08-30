@@ -164,9 +164,10 @@ defmodule Romeo.Transports.TCP do
   end
 
   defp parse_data(%Conn{jid: jid, parser: parser} = conn, data) do
-    Logger.debug fn -> "[#{jid}][INCOMING] #{inspect data}" end
+    trimmed = String.trim(data)
+    Logger.debug fn -> "[#{jid}][INCOMING] #{inspect trimmed}" end
 
-    parser = :fxml_stream.parse(parser, data)
+    parser = :fxml_stream.parse(parser, trimmed)
 
     stanza =
       case receive_stanza() do
