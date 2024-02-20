@@ -5,6 +5,9 @@
 [![Build Status](https://travis-ci.org/scrogson/romeo.svg?branch=master)](https://travis-ci.org/scrogson/romeo)
 [![Coverage Status](https://coveralls.io/repos/scrogson/romeo/badge.svg?branch=master&service=github)](https://coveralls.io/github/scrogson/romeo?branch=master)
 
+## Motivation to Fork
+This fork trims incoming messages before parsing to prevent unexpected errors
+
 ## Installation
 
 1. Add romeo to your list of dependencies in `mix.exs`:
